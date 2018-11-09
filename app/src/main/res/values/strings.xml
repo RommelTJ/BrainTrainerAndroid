@@ -4,4 +4,5 @@
     <string name="play_again">Play Again</string>
     <string name="scoreBoard">0/0</string>
     <string name="buttonVal1">14</string>
+    <string name="problemToSolve">31 + 7</string>
 </resources>
