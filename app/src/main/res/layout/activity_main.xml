@@ -14,7 +14,7 @@
             android:backgroundTint="@android:color/holo_green_light"
             android:onClick="start"
             android:padding="40dp"
-            android:text="GO!"
+            android:text="@string/go"
             android:textSize="60sp"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
