@@ -77,7 +77,7 @@
                     android:background="@android:color/holo_red_light"
                     android:onClick="chooseAnswer"
                     android:tag="0"
-                    android:text="14"
+                    android:text="@string/buttonVal1"
                     android:textSize="80sp" />
 
             <Button
@@ -92,7 +92,7 @@
                     android:background="@android:color/holo_purple"
                     android:onClick="chooseAnswer"
                     android:tag="1"
-                    android:text="14"
+                    android:text="@string/buttonVal1"
                     android:textSize="80sp" />
 
             <Button
@@ -107,7 +107,7 @@
                     android:background="@android:color/holo_blue_dark"
                     android:onClick="chooseAnswer"
                     android:tag="2"
-                    android:text="14"
+                    android:text="@string/buttonVal1"
                     android:textSize="80sp" />
 
             <Button
@@ -122,7 +122,7 @@
                     android:background="@android:color/holo_green_light"
                     android:onClick="chooseAnswer"
                     android:tag="3"
-                    android:text="14"
+                    android:text="@string/buttonVal1"
                     android:textSize="80sp" />
 
         </GridLayout>
