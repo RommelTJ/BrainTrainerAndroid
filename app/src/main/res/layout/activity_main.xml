@@ -160,7 +160,7 @@
                 android:layout_marginTop="16dp"
                 android:background="@android:color/holo_orange_light"
                 android:padding="10dp"
-                android:text="30s"
+                android:text="@string/timeLeft"
                 android:textSize="40sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

@@ -6,4 +6,5 @@
     <string name="buttonVal1">14</string>
     <string name="problemToSolve">31 + 7</string>
     <string name="correct">Correct!</string>
+    <string name="timeLeft">30s</string>
 </resources>
