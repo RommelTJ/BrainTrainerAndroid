@@ -2,6 +2,7 @@ package com.rommelrico.braintrainerandroid
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.constraint.solver.widgets.ConstraintHorizontalLayout
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     var sumTextView: TextView? = null
     var timerTextView: TextView? = null
     var playAgainButton: Button? = null
+    var gameLayout: ConstraintHorizontalLayout? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
