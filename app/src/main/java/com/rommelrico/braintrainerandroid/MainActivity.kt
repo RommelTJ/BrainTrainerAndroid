@@ -33,7 +33,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun start(view: View) {
-        // TODO: Implement me.
+        goButton?.visibility = View.INVISIBLE
+        gameLayout?.visibility = View.VISIBLE
+        playAgain(findViewById(R.id.timerTextView))
     }
 
     fun playAgain(view: View) {
