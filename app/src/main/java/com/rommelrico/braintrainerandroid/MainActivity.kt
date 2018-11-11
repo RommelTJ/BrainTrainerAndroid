@@ -3,7 +3,6 @@ package com.rommelrico.braintrainerandroid
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.support.constraint.solver.widgets.ConstraintHorizontalLayout
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -93,7 +92,7 @@ class MainActivity : AppCompatActivity() {
         val a = rand.nextInt(21)
         val b = rand.nextInt(21)
 
-        sumTextView?.text = "${a} ${b}"
+        sumTextView?.text = "${a} + ${b}"
 
         locationOfCorrectAnswer = rand.nextInt(4)
 
