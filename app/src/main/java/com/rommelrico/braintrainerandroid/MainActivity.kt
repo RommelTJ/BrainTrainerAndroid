@@ -25,11 +25,26 @@ class MainActivity : AppCompatActivity() {
     var sumTextView: TextView? = null
     var timerTextView: TextView? = null
     var playAgainButton: Button? = null
-    var gameLayout: ConstraintHorizontalLayout? = null
+    var gameLayout: View? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        sumTextView = findViewById(R.id.sumTextView)
+        button0 = findViewById(R.id.button0)
+        button1 = findViewById(R.id.button1)
+        button2 = findViewById(R.id.button2)
+        button3 = findViewById(R.id.button3)
+        resultTextView = findViewById(R.id.resultTextView)
+        scoreTextView = findViewById(R.id.scoreTextView)
+        timerTextView = findViewById(R.id.timerTextView)
+        playAgainButton = findViewById(R.id.playAgainButton)
+        gameLayout = findViewById(R.id.gameLayout)
+        goButton = findViewById(R.id.goButton)
+
+        goButton?.visibility = View.VISIBLE
+        gameLayout?.visibility = View.INVISIBLE
     }
 
     fun start(view: View) {
