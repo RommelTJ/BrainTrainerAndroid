@@ -7,7 +7,7 @@ import android.support.constraint.solver.widgets.ConstraintHorizontalLayout
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import java.util.ArrayList
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -62,5 +62,37 @@ class MainActivity : AppCompatActivity() {
         // TODO: Implement me.
     }
 
+    fun newQuestion() {
+        val rand = Random()
+
+        val a = rand.nextInt(21)
+        val b = rand.nextInt(21)
+
+        sumTextView?.text = "${a} ${b}"
+
+        locationOfCorrectAnswer = rand.nextInt(4)
+
+        answers.clear()
+
+        for (i in 0..3) {
+            if (i == locationOfCorrectAnswer) {
+                answers.add(a + b)
+            } else {
+                var wrongAnswer = rand.nextInt(41)
+
+                while (wrongAnswer == a + b) {
+                    wrongAnswer = rand.nextInt(41)
+                }
+
+                answers.add(wrongAnswer)
+            }
+
+        }
+
+        button0?.text = answers[0].toString()
+        button1?.text = answers[1].toString()
+        button2?.text = answers[2].toString()
+        button3?.text = answers[3].toString()
+    }
 
 }
