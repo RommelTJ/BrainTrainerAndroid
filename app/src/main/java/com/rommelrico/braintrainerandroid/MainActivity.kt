@@ -2,6 +2,7 @@ package com.rommelrico.braintrainerandroid
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.support.constraint.solver.widgets.ConstraintHorizontalLayout
 import android.view.View
 import android.widget.Button
@@ -36,7 +37,25 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun playAgain(view: View) {
-        // TODO: Implement me.
+        score = 0
+        numberOfQuestions = 0
+        timerTextView.setText("30s")
+        scoreTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfQuestions))
+        newQuestion()
+        playAgainButton.setVisibility(View.INVISIBLE)
+        resultTextView.setText("")
+
+        object : CountDownTimer(30100, 1000) {
+
+            override fun onTick(l: Long) {
+                timerTextView.setText((l / 1000).toString() + "s")
+            }
+
+            override fun onFinish() {
+                resultTextView.setText("Done!")
+                playAgainButton.setVisibility(View.VISIBLE)
+            }
+        }.start()
     }
 
     fun chooseAnswer(view: View) {
