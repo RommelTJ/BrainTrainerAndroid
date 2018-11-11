@@ -39,21 +39,21 @@ class MainActivity : AppCompatActivity() {
     fun playAgain(view: View) {
         score = 0
         numberOfQuestions = 0
-        timerTextView.setText("30s")
-        scoreTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfQuestions))
+        timerTextView?.text = "30s"
+        scoreTextView?.text = "$score / $numberOfQuestions"
         newQuestion()
-        playAgainButton.setVisibility(View.INVISIBLE)
-        resultTextView.setText("")
+        playAgainButton?.visibility = View.INVISIBLE
+        resultTextView?.text = ""
 
         object : CountDownTimer(30100, 1000) {
 
             override fun onTick(l: Long) {
-                timerTextView.setText((l / 1000).toString() + "s")
+                timerTextView?.text = ((l / 1000).toString() + "s")
             }
 
             override fun onFinish() {
-                resultTextView.setText("Done!")
-                playAgainButton.setVisibility(View.VISIBLE)
+                resultTextView?.text = "Done!"
+                playAgainButton?.visibility = View.VISIBLE
             }
         }.start()
     }
