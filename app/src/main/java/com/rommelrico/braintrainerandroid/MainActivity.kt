@@ -59,7 +59,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun chooseAnswer(view: View) {
-        // TODO: Implement me.
+        if (Integer.toString(locationOfCorrectAnswer) == view.tag.toString()) {
+            resultTextView?.text = "Correct!"
+            score++
+        } else {
+            resultTextView?.text = "Wrong :("
+        }
+        numberOfQuestions++
+        scoreTextView?.text = "$score / $numberOfQuestions"
+        newQuestion()
     }
 
     fun newQuestion() {
